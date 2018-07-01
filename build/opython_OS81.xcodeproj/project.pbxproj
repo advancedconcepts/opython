@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40330DD920E914510082044D /* omnis_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DD620E914510082044D /* omnis_lib.cpp */; };
+		40330DDA20E914510082044D /* opython.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DD720E914510082044D /* opython.cpp */; };
+		40330DDB20E914510082044D /* omnis_lib_wrap.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 40330DD820E914510082044D /* omnis_lib_wrap.cxx */; };
+		40330DDE20E918A00082044D /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40330DDD20E918A00082044D /* Python.framework */; };
+		40330DE320E919630082044D /* opython.h in Resources */ = {isa = PBXBuildFile; fileRef = 40330DDF20E919620082044D /* opython.h */; };
+		40330DE420E919630082044D /* embedded_python.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DE020E919620082044D /* embedded_python.cpp */; };
+		40330DE520E91C4D0082044D /* FrameworkWndProc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97272097DC99006A5A95 /* FrameworkWndProc.cpp */; };
+		40330DE820E924580082044D /* opythonobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DE720E924580082044D /* opythonobject.cpp */; };
+		40B4B4E220E90ED40044B6C7 /* opython.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 40B4B4DE20E90ED40044B6C7 /* opython.bmp */; };
+		40B4B4E320E90ED40044B6C7 /* opython.rc in Resources */ = {isa = PBXBuildFile; fileRef = 40B4B4E020E90ED40044B6C7 /* opython.rc */; };
+		96CA4E550907E8CC00C234AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		96CA4E5A0907E8CC00C234AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA7FFBFE8413EDC02AAC07 /* Cocoa.framework */; };
+		96CA4E660907EB0700C234AA /* u_complib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CA4E650907EB0700C234AA /* u_complib.framework */; };
+		ACFD97362097DC9B006A5A95 /* oBaseNVComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97222097DC99006A5A95 /* oBaseNVComponent.cpp */; };
+		ACFD97372097DC9B006A5A95 /* oBaseComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97242097DC99006A5A95 /* oBaseComponent.cpp */; };
+		ACFD97392097DC9B006A5A95 /* qString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97292097DC99006A5A95 /* qString.cpp */; };
+		ACFD973A2097DC9B006A5A95 /* oBaseVisComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD972B2097DC99006A5A95 /* oBaseVisComponent.cpp */; };
+		ACFD973B2097DC9B006A5A95 /* oXCompLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD972C2097DC9A006A5A95 /* oXCompLib.cpp */; };
+		ACFD973C2097DC9B006A5A95 /* oDrawingCanvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD972F2097DC9A006A5A95 /* oDrawingCanvas.cpp */; };
+		ACFD973D2097DC9B006A5A95 /* oUTF8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97332097DC9A006A5A95 /* oUTF8.cpp */; };
+		ACFD973E2097DC9B006A5A95 /* oRGBAImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97352097DC9A006A5A95 /* oRGBAImage.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		96CA4E5C0907E8CC00C234AA /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.rc";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(TEMP_FILE_DIR)/omnisrc/Localizable.strings",
+			);
+			script = "$DEVELOPER_TOOLS_DIR/omnisrc64.app/Contents/MacOS/omnisrc64 INPUT_FILE_PATH TEMP_FILE_DIR REZ_SEARCH_PATHS XCOMP\nif [ -f $TEMP_FILE_DIR/omnisrc/Bitmap.strings ]; then\ncp $TEMP_FILE_DIR/omnisrc/Bitmap.strings $INSTALL_DIR/$CONTENTS_FOLDER_PATH/Resources\nfi\nshopt -s nullglob\nif [ ! -z \"`echo $TEMP_FILE_DIR/omnisrc/*.PNG`\" ]; then\ncp $TEMP_FILE_DIR/omnisrc/*.PNG $INSTALL_DIR/$CONTENTS_FOLDER_PATH/Resources\nfi";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08EA7FFBFE8413EDC02AAC07 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		40330DD620E914510082044D /* omnis_lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = omnis_lib.cpp; path = ../src/omnis_lib.cpp; sourceTree = "<group>"; };
+		40330DD720E914510082044D /* opython.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = opython.cpp; path = ../src/opython.cpp; sourceTree = "<group>"; };
+		40330DD820E914510082044D /* omnis_lib_wrap.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = omnis_lib_wrap.cxx; path = ../src/omnis_lib_wrap.cxx; sourceTree = "<group>"; };
+		40330DDD20E918A00082044D /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = System/Library/Frameworks/Python.framework; sourceTree = SDKROOT; };
+		40330DDF20E919620082044D /* opython.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opython.h; path = ../src/opython.h; sourceTree = "<group>"; };
+		40330DE020E919620082044D /* embedded_python.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = embedded_python.cpp; path = ../src/embedded_python.cpp; sourceTree = "<group>"; };
+		40330DE120E919620082044D /* embedded_python.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = embedded_python.h; path = ../src/embedded_python.h; sourceTree = "<group>"; };
+		40330DE220E919620082044D /* omnis_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = omnis_lib.h; path = ../src/omnis_lib.h; sourceTree = "<group>"; };
+		40330DE620E924580082044D /* opythonobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opythonobject.h; path = ../src/opythonobject.h; sourceTree = "<group>"; };
+		40330DE720E924580082044D /* opythonobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = opythonobject.cpp; path = ../src/opythonobject.cpp; sourceTree = "<group>"; };
+		40B4B4DF20E90ED40044B6C7 /* English */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = English; path = English.lproj/opython.bmp; sourceTree = "<group>"; };
+		40B4B4E120E90ED40044B6C7 /* English */ = {isa = PBXFileReference; lastKnownFileType = text; name = English; path = English.lproj/opython.rc; sourceTree = "<group>"; };
+		96CA4E610907E8CC00C234AA /* opython.u_xcomp */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = opython.u_xcomp; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CA4E650907EB0700C234AA /* u_complib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = u_complib.framework; path = ../complib/u_complib.framework; sourceTree = SOURCE_ROOT; };
+		AC48CBBD209991980019A1E9 /* example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = example.h; path = Src/example.h; sourceTree = "<group>"; };
+		AC48CBBE209991980019A1E9 /* oNVExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oNVExample.h; path = Src/oNVExample.h; sourceTree = "<group>"; };
+		AC48CBBF209991980019A1E9 /* oExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oExample.h; path = Src/oExample.h; sourceTree = "<group>"; };
+		AC48CBC0209991A60019A1E9 /* example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = example.cpp; path = Src/example.cpp; sourceTree = "<group>"; };
+		AC48CBC1209991A60019A1E9 /* oExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oExample.cpp; path = Src/oExample.cpp; sourceTree = "<group>"; };
+		AC48CBC2209991A60019A1E9 /* oNVExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oNVExample.cpp; path = Src/oNVExample.cpp; sourceTree = "<group>"; };
+		ACFD97222097DC99006A5A95 /* oBaseNVComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oBaseNVComponent.cpp; path = ../omnis.xcomp.framewrk/oBaseNVComponent.cpp; sourceTree = "<group>"; };
+		ACFD97232097DC99006A5A95 /* oBaseComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oBaseComponent.h; path = ../omnis.xcomp.framewrk/oBaseComponent.h; sourceTree = "<group>"; };
+		ACFD97242097DC99006A5A95 /* oBaseComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oBaseComponent.cpp; path = ../omnis.xcomp.framewrk/oBaseComponent.cpp; sourceTree = "<group>"; };
+		ACFD97252097DC99006A5A95 /* oBaseVisComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oBaseVisComponent.h; path = ../omnis.xcomp.framewrk/oBaseVisComponent.h; sourceTree = "<group>"; };
+		ACFD97262097DC99006A5A95 /* oUTF8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oUTF8.h; path = ../omnis.xcomp.framewrk/oUTF8.h; sourceTree = "<group>"; };
+		ACFD97272097DC99006A5A95 /* FrameworkWndProc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FrameworkWndProc.cpp; path = ../omnis.xcomp.framewrk/FrameworkWndProc.cpp; sourceTree = "<group>"; };
+		ACFD97282097DC99006A5A95 /* oXCompLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oXCompLib.h; path = ../omnis.xcomp.framewrk/oXCompLib.h; sourceTree = "<group>"; };
+		ACFD97292097DC99006A5A95 /* qString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qString.cpp; path = ../omnis.xcomp.framewrk/qString.cpp; sourceTree = "<group>"; };
+		ACFD972A2097DC99006A5A95 /* oRGBAImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oRGBAImage.h; path = ../omnis.xcomp.framewrk/oRGBAImage.h; sourceTree = "<group>"; };
+		ACFD972B2097DC99006A5A95 /* oBaseVisComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oBaseVisComponent.cpp; path = ../omnis.xcomp.framewrk/oBaseVisComponent.cpp; sourceTree = "<group>"; };
+		ACFD972C2097DC9A006A5A95 /* oXCompLib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oXCompLib.cpp; path = ../omnis.xcomp.framewrk/oXCompLib.cpp; sourceTree = "<group>"; };
+		ACFD972D2097DC9A006A5A95 /* qString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qString.h; path = ../omnis.xcomp.framewrk/qString.h; sourceTree = "<group>"; };
+		ACFD972E2097DC9A006A5A95 /* xCompStandardIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xCompStandardIncludes.h; path = ../omnis.xcomp.framewrk/xCompStandardIncludes.h; sourceTree = "<group>"; };
+		ACFD972F2097DC9A006A5A95 /* oDrawingCanvas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oDrawingCanvas.cpp; path = ../omnis.xcomp.framewrk/oDrawingCanvas.cpp; sourceTree = "<group>"; };
+		ACFD97302097DC9A006A5A95 /* omnis.xcomp.framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = omnis.xcomp.framework.h; path = ../omnis.xcomp.framewrk/omnis.xcomp.framework.h; sourceTree = "<group>"; };
+		ACFD97312097DC9A006A5A95 /* qArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qArray.h; path = ../omnis.xcomp.framewrk/qArray.h; sourceTree = "<group>"; };
+		ACFD97322097DC9A006A5A95 /* oDrawingCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oDrawingCanvas.h; path = ../omnis.xcomp.framewrk/oDrawingCanvas.h; sourceTree = "<group>"; };
+		ACFD97332097DC9A006A5A95 /* oUTF8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oUTF8.cpp; path = ../omnis.xcomp.framewrk/oUTF8.cpp; sourceTree = "<group>"; };
+		ACFD97342097DC9A006A5A95 /* oBaseNVComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oBaseNVComponent.h; path = ../omnis.xcomp.framewrk/oBaseNVComponent.h; sourceTree = "<group>"; };
+		ACFD97352097DC9A006A5A95 /* oRGBAImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oRGBAImage.cpp; path = ../omnis.xcomp.framewrk/oRGBAImage.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96CA4E590907E8CC00C234AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40330DDE20E918A00082044D /* Python.framework in Frameworks */,
+				96CA4E5A0907E8CC00C234AA /* Cocoa.framework in Frameworks */,
+				96CA4E660907EB0700C234AA /* u_complib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* xrandom */ = {
+			isa = PBXGroup;
+			children = (
+				ACFD97212097DC6C006A5A95 /* omnis.xcomp.frameworks */,
+				96D631340905093100E0F291 /* Headers */,
+				08FB77ADFE841716C02AAC07 /* Source */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				19C28FB4FE9D528D11CA2CBB /* Products */,
+				40330DDC20E918A00082044D /* Frameworks */,
+			);
+			name = xrandom;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				96CA4E650907EB0700C234AA /* u_complib.framework */,
+				08EA7FFBFE8413EDC02AAC07 /* Cocoa.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				40B4B4DE20E90ED40044B6C7 /* opython.bmp */,
+				40B4B4E020E90ED40044B6C7 /* opython.rc */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77ADFE841716C02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				40330DE720E924580082044D /* opythonobject.cpp */,
+				40330DE620E924580082044D /* opythonobject.h */,
+				40330DE020E919620082044D /* embedded_python.cpp */,
+				40330DE120E919620082044D /* embedded_python.h */,
+				40330DE220E919620082044D /* omnis_lib.h */,
+				40330DDF20E919620082044D /* opython.h */,
+				40330DD820E914510082044D /* omnis_lib_wrap.cxx */,
+				40330DD620E914510082044D /* omnis_lib.cpp */,
+				40330DD720E914510082044D /* opython.cpp */,
+				AC48CBC0209991A60019A1E9 /* example.cpp */,
+				AC48CBC1209991A60019A1E9 /* oExample.cpp */,
+				AC48CBC2209991A60019A1E9 /* oNVExample.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		19C28FB4FE9D528D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96CA4E610907E8CC00C234AA /* opython.u_xcomp */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40330DDC20E918A00082044D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40330DDD20E918A00082044D /* Python.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96D631340905093100E0F291 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				AC48CBBD209991980019A1E9 /* example.h */,
+				AC48CBBF209991980019A1E9 /* oExample.h */,
+				AC48CBBE209991980019A1E9 /* oNVExample.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		ACFD97212097DC6C006A5A95 /* omnis.xcomp.frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACFD97272097DC99006A5A95 /* FrameworkWndProc.cpp */,
+				ACFD97242097DC99006A5A95 /* oBaseComponent.cpp */,
+				ACFD97232097DC99006A5A95 /* oBaseComponent.h */,
+				ACFD97222097DC99006A5A95 /* oBaseNVComponent.cpp */,
+				ACFD97342097DC9A006A5A95 /* oBaseNVComponent.h */,
+				ACFD972B2097DC99006A5A95 /* oBaseVisComponent.cpp */,
+				ACFD97252097DC99006A5A95 /* oBaseVisComponent.h */,
+				ACFD972F2097DC9A006A5A95 /* oDrawingCanvas.cpp */,
+				ACFD97322097DC9A006A5A95 /* oDrawingCanvas.h */,
+				ACFD97302097DC9A006A5A95 /* omnis.xcomp.framework.h */,
+				ACFD97352097DC9A006A5A95 /* oRGBAImage.cpp */,
+				ACFD972A2097DC99006A5A95 /* oRGBAImage.h */,
+				ACFD97332097DC9A006A5A95 /* oUTF8.cpp */,
+				ACFD97262097DC99006A5A95 /* oUTF8.h */,
+				ACFD972C2097DC9A006A5A95 /* oXCompLib.cpp */,
+				ACFD97282097DC99006A5A95 /* oXCompLib.h */,
+				ACFD97312097DC9A006A5A95 /* qArray.h */,
+				ACFD97292097DC99006A5A95 /* qString.cpp */,
+				ACFD972D2097DC9A006A5A95 /* qString.h */,
+				ACFD972E2097DC9A006A5A95 /* xCompStandardIncludes.h */,
+			);
+			name = omnis.xcomp.frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96CA4E530907E8CC00C234AA /* UnicodeCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CA4E5D0907E8CC00C234AA /* Build configuration list for PBXNativeTarget "UnicodeCore" */;
+			buildPhases = (
+				96CA4E540907E8CC00C234AA /* Resources */,
+				96CA4E570907E8CC00C234AA /* Sources */,
+				96CA4E590907E8CC00C234AA /* Frameworks */,
+			);
+			buildRules = (
+				96CA4E5C0907E8CC00C234AA /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = UnicodeCore;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = xrandom;
+			productReference = 96CA4E610907E8CC00C234AA /* opython.u_xcomp */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = 96CF455E08FBABD1003AA3FE /* Build configuration list for PBXProject "opython_OS81" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				english,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* xrandom */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96CA4E530907E8CC00C234AA /* UnicodeCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96CA4E540907E8CC00C234AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40B4B4E220E90ED40044B6C7 /* opython.bmp in Resources */,
+				96CA4E550907E8CC00C234AA /* InfoPlist.strings in Resources */,
+				40330DE320E919630082044D /* opython.h in Resources */,
+				40B4B4E320E90ED40044B6C7 /* opython.rc in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96CA4E570907E8CC00C234AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACFD973B2097DC9B006A5A95 /* oXCompLib.cpp in Sources */,
+				40330DE420E919630082044D /* embedded_python.cpp in Sources */,
+				ACFD973C2097DC9B006A5A95 /* oDrawingCanvas.cpp in Sources */,
+				40330DD920E914510082044D /* omnis_lib.cpp in Sources */,
+				ACFD97392097DC9B006A5A95 /* qString.cpp in Sources */,
+				40330DDB20E914510082044D /* omnis_lib_wrap.cxx in Sources */,
+				ACFD973A2097DC9B006A5A95 /* oBaseVisComponent.cpp in Sources */,
+				ACFD97372097DC9B006A5A95 /* oBaseComponent.cpp in Sources */,
+				40330DE820E924580082044D /* opythonobject.cpp in Sources */,
+				40330DDA20E914510082044D /* opython.cpp in Sources */,
+				40330DE520E91C4D0082044D /* FrameworkWndProc.cpp in Sources */,
+				ACFD973D2097DC9B006A5A95 /* oUTF8.cpp in Sources */,
+				ACFD973E2097DC9B006A5A95 /* oRGBAImage.cpp in Sources */,
+				ACFD97362097DC9B006A5A95 /* oBaseNVComponent.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		40B4B4DE20E90ED40044B6C7 /* opython.bmp */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40B4B4DF20E90ED40044B6C7 /* English */,
+			);
+			name = opython.bmp;
+			sourceTree = "<group>";
+		};
+		40B4B4E020E90ED40044B6C7 /* opython.rc */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40B4B4E120E90ED40044B6C7 /* English */,
+			);
+			name = opython.rc;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96CA4E5E0907E8CC00C234AA /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				BUILD_VARIANTS = normal;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(OMNIS_SDK_ROOT)/complib";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers/carbnuni.h";
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers";
+				INFOPLIST_FILE = Info.plist;
+				INIT_ROUTINE = "";
+				INSTALL_PATH = "$(PROJECT_DIR)/../_OSXUnicodeDbg";
+				LIBRARY_SEARCH_PATHS = "$(PYTHON_ROOT)";
+				LIBRARY_STYLE = DYNAMIC;
+				OMNIS_SDK_ROOT = "../../omnis/OSX-SDK-8.1-x64";
+				OTHER_CFLAGS = (
+					"-fshort-wchar",
+					"-Dismach_o",
+					"-Wno-comment",
+					"-DOMNISSDK=81",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				PRODUCT_NAME = opython;
+				PYTHON_ROOT_ = "../../Python-2.6";
+				RESMERGER_SOURCES_FORK = data;
+				REZ_SEARCH_PATHS = (
+					$PROJECT_DIR,
+					$PROJECT_DIR/English.lproj,
+				);
+				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PYTHON_ROOT)/include $(PYTHON_ROOT)";
+				WRAPPER_EXTENSION = u_xcomp;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		96CA4E5F0907E8CC00C234AA /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				FRAMEWORK_SEARCH_PATHS = "$(OMNIS_SDK_ROOT)/complib";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers/carbnuni.h";
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(PROJECT_DIR)/../_OSXUnicode";
+				LIBRARY_SEARCH_PATHS = "$(PYTHON_ROOT)";
+				LIBRARY_STYLE = DYNAMIC;
+				OMNIS_SDK_ROOT = "../../omnis/OSX-SDK-8.1-x64";
+				OTHER_CFLAGS = (
+					"-fshort-wchar",
+					"-Dismach_o",
+					"-Wno-comment",
+					"-DOMNISSDK=81",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
+				PRODUCT_NAME = opython;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
+				PYTHON_ROOT_ = "../../Python-2.6";
+				RESMERGER_SOURCES_FORK = data;
+				REZ_SEARCH_PATHS = (
+					$PROJECT_DIR,
+					$PROJECT_DIR/English.lproj,
+				);
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PYTHON_ROOT)/include $(PYTHON_ROOT)";
+				VERSION_INFO_FILE = "$(PRODUCT_NAME)_vers.c";
+				WRAPPER_EXTENSION = u_xcomp;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		96CF455F08FBABD1003AA3FE /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				SDKROOT = macosx;
+			};
+			name = Development;
+		};
+		96CF456008FBABD1003AA3FE /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				HEADER_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				SDKROOT = macosx;
+			};
+			name = Deployment;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96CA4E5D0907E8CC00C234AA /* Build configuration list for PBXNativeTarget "UnicodeCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CA4E5E0907E8CC00C234AA /* Development */,
+				96CA4E5F0907E8CC00C234AA /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		96CF455E08FBABD1003AA3FE /* Build configuration list for PBXProject "opython_OS81" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CF455F08FBABD1003AA3FE /* Development */,
+				96CF456008FBABD1003AA3FE /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
