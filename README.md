@@ -8,7 +8,7 @@ TBD
 ## Installation
 
 - Copy the oPython XCOMP into the corresponding XCOMP folder of Omnis Studio.
-- The omnis.py file belongs to the site-packages folder in your python home. 
+- The omnis.py file belongs to the site-packages folder in your python home. (On macOS for the built-in Python this is in `/Library/Python/2.7/site-packages`)
 
 ## Reference
 
