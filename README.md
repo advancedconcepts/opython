@@ -14,7 +14,17 @@ TBD
 
 ### Python Home
 
-The python home path is indicating the place for all available functionality, if you don't set it, then it is using the system wide python installation, but you can also isolate yourself from the rest by indicating a different python home, e.g. a folder named python in the xcomp folder:
+The python home path is indicating the place for all available functionality, if you don't set it, then it is using the system wide python installation, but you can also isolate yourself from the rest by indicating a different python home.
+
+```
+oPyLib.$setpythonhome(homepath)
+```
+
+| Parameter  | Description  |
+|---------------|----------------|
+| homepath    |   full path of the python home   |
+
+ e.g. a folder named python in the xcomp folder:
 
 ```
 Calculate home as con(sys(115),'xcomp',pathsep(),'python') 
@@ -24,9 +34,41 @@ End If
 Do oPyLib.$setpythonhome(home)
 ```
 
+
 ### Executing a .py file
+
+In order to execute code that resides in a separate file, you use the $runfile command which loads the respective file and executes it. 
+
+
+```
+oPyLib.$runfile(pythonfilepath, modulename)
+```
+
+| Parameter  | Description  |
+|---------------|----------------|
+| pythonfilepath    |   full path of the .py file   |
+| modulename    |   name in which global namespace this file should be executed   |
+
+This executes a file script2.py in a python folder besides the current library.
+
+```
+Calculate scriptdir as con(left(sys(10),rpos(pathsep(),sys(10))),'python',pathsep())
+Do oPyLib.$runfile(con(scriptdir,'script2.py'),"__main__") Returns #S1
+```
+
 ### Writing Python Code within an Omnis Library
 #### Evaluationg an expression
+
+```
+oPyLib.$runstring(expressiontext, modulename)
+```
+
+| Parameter  | Description  |
+|---------------|----------------|
+| expressiontext    |   expression to be evaluated |
+| modulename    |   name in which global namespace this file should be executed   |
+
+Example:
 
 ```
 Do oPyLib.$runstring("'hello'+' there'","__main__") Returns #S1
@@ -34,6 +76,17 @@ OK message Python Result was {[#S1]}
 ```
 
 #### Executing a code block
+
+```
+oPyLib.$runtext(scripttext, modulename)
+```
+
+| Parameter  | Description  |
+|---------------|----------------|
+| scripttext    |   script source to be executed   |
+| modulename    |   name in which global namespace this file should be executed   |
+
+Example:
 
 ```
 Begin text block
@@ -49,12 +102,35 @@ Do oPyLib.$runtext(script,"__main__")
 #### messageBox
 
 ```python
+omnis.messageBox(buttonflags, bell, message) 
+```
+
+| Parameter  | Description  |
+|---------------|----------------|
+| buttonflags    |   indicating which buttons should be shown, which button is default and whether an icon should be shown, one of MSGBOX[ICON\CANCEL]\_OK, MSGBOX\_YESNO, MSGBOX\_NOYES   |
+| bell    |   should alert sound be played |
+| message    |   the message to be displayed |
+
+Example:
+
+```python
 import omnis 
 
 omnis.messageBox(omnis.MSGBOXICON_OK,False,"Hello to Omnis from Python") 
 ```
 
 #### addTraceLine
+
+```python
+omnis.addTraceLine(message) 
+```
+
+| Parameter  | Description  |
+|---------------|----------------|
+| message    |   the message to be displayed |
+
+Example:
+
 
 ```python
 import omnis 
