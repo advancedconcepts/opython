@@ -64,9 +64,6 @@
 		AC48CBBD209991980019A1E9 /* example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = example.h; path = Src/example.h; sourceTree = "<group>"; };
 		AC48CBBE209991980019A1E9 /* oNVExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oNVExample.h; path = Src/oNVExample.h; sourceTree = "<group>"; };
 		AC48CBBF209991980019A1E9 /* oExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oExample.h; path = Src/oExample.h; sourceTree = "<group>"; };
-		AC48CBC0209991A60019A1E9 /* example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = example.cpp; path = Src/example.cpp; sourceTree = "<group>"; };
-		AC48CBC1209991A60019A1E9 /* oExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oExample.cpp; path = Src/oExample.cpp; sourceTree = "<group>"; };
-		AC48CBC2209991A60019A1E9 /* oNVExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oNVExample.cpp; path = Src/oNVExample.cpp; sourceTree = "<group>"; };
 		ACFD97222097DC99006A5A95 /* oBaseNVComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oBaseNVComponent.cpp; path = ../omnis.xcomp.framewrk/oBaseNVComponent.cpp; sourceTree = "<group>"; };
 		ACFD97232097DC99006A5A95 /* oBaseComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oBaseComponent.h; path = ../omnis.xcomp.framewrk/oBaseComponent.h; sourceTree = "<group>"; };
 		ACFD97242097DC99006A5A95 /* oBaseComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oBaseComponent.cpp; path = ../omnis.xcomp.framewrk/oBaseComponent.cpp; sourceTree = "<group>"; };
@@ -148,9 +145,6 @@
 				40330DD820E914510082044D /* omnis_lib_wrap.cxx */,
 				40330DD620E914510082044D /* omnis_lib.cpp */,
 				40330DD720E914510082044D /* opython.cpp */,
-				AC48CBC0209991A60019A1E9 /* example.cpp */,
-				AC48CBC1209991A60019A1E9 /* oExample.cpp */,
-				AC48CBC2209991A60019A1E9 /* oNVExample.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
