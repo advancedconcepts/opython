@@ -11,13 +11,9 @@
 		40330DDA20E914510082044D /* opython.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DD720E914510082044D /* opython.cpp */; };
 		40330DDB20E914510082044D /* omnis_lib_wrap.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 40330DD820E914510082044D /* omnis_lib_wrap.cxx */; };
 		40330DDE20E918A00082044D /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40330DDD20E918A00082044D /* Python.framework */; };
-		40330DE320E919630082044D /* opython.h in Resources */ = {isa = PBXBuildFile; fileRef = 40330DDF20E919620082044D /* opython.h */; };
 		40330DE420E919630082044D /* embedded_python.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DE020E919620082044D /* embedded_python.cpp */; };
 		40330DE520E91C4D0082044D /* FrameworkWndProc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97272097DC99006A5A95 /* FrameworkWndProc.cpp */; };
 		40330DE820E924580082044D /* opythonobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DE720E924580082044D /* opythonobject.cpp */; };
-		40B4B4E220E90ED40044B6C7 /* opython.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 40B4B4DE20E90ED40044B6C7 /* opython.bmp */; };
-		40B4B4E320E90ED40044B6C7 /* opython.rc in Resources */ = {isa = PBXBuildFile; fileRef = 40B4B4E020E90ED40044B6C7 /* opython.rc */; };
-		96CA4E550907E8CC00C234AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		96CA4E5A0907E8CC00C234AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA7FFBFE8413EDC02AAC07 /* Cocoa.framework */; };
 		96CA4E660907EB0700C234AA /* u_complib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CA4E650907EB0700C234AA /* u_complib.framework */; };
 		ACFD97362097DC9B006A5A95 /* oBaseNVComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97222097DC99006A5A95 /* oBaseNVComponent.cpp */; };
@@ -45,7 +41,6 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
-		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08EA7FFBFE8413EDC02AAC07 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		40330DD620E914510082044D /* omnis_lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = omnis_lib.cpp; path = ../src/omnis_lib.cpp; sourceTree = "<group>"; };
 		40330DD720E914510082044D /* opython.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = opython.cpp; path = ../src/opython.cpp; sourceTree = "<group>"; };
@@ -57,8 +52,9 @@
 		40330DE220E919620082044D /* omnis_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = omnis_lib.h; path = ../src/omnis_lib.h; sourceTree = "<group>"; };
 		40330DE620E924580082044D /* opythonobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opythonobject.h; path = ../src/opythonobject.h; sourceTree = "<group>"; };
 		40330DE720E924580082044D /* opythonobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = opythonobject.cpp; path = ../src/opythonobject.cpp; sourceTree = "<group>"; };
-		40B4B4DF20E90ED40044B6C7 /* English */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = English; path = English.lproj/opython.bmp; sourceTree = "<group>"; };
-		40B4B4E120E90ED40044B6C7 /* English */ = {isa = PBXFileReference; lastKnownFileType = text; name = English; path = English.lproj/opython.rc; sourceTree = "<group>"; };
+		4049E3002305A95D00A2D24E /* opython.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = opython.rc; sourceTree = "<group>"; };
+		4049E3012305A95E00A2D24E /* opython.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = opython.bmp; sourceTree = "<group>"; };
+		4049E3042305A96D00A2D24E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96CA4E610907E8CC00C234AA /* opython.u_xcomp */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = opython.u_xcomp; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CA4E650907EB0700C234AA /* u_complib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = u_complib.framework; path = ../complib/u_complib.framework; sourceTree = SOURCE_ROOT; };
 		AC48CBBD209991980019A1E9 /* example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = example.h; path = Src/example.h; sourceTree = "<group>"; };
@@ -126,9 +122,9 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				40B4B4DE20E90ED40044B6C7 /* opython.bmp */,
-				40B4B4E020E90ED40044B6C7 /* opython.rc */,
-				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+				4049E3042305A96D00A2D24E /* Info.plist */,
+				4049E3012305A95E00A2D24E /* opython.bmp */,
+				4049E3002305A95D00A2D24E /* opython.rc */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -212,6 +208,7 @@
 				96CA4E540907E8CC00C234AA /* Resources */,
 				96CA4E570907E8CC00C234AA /* Sources */,
 				96CA4E590907E8CC00C234AA /* Frameworks */,
+				4049E3072305AE5300A2D24E /* ShellScript */,
 			);
 			buildRules = (
 				96CA4E5C0907E8CC00C234AA /* PBXBuildRule */,
@@ -256,14 +253,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40B4B4E220E90ED40044B6C7 /* opython.bmp in Resources */,
-				96CA4E550907E8CC00C234AA /* InfoPlist.strings in Resources */,
-				40330DE320E919630082044D /* opython.h in Resources */,
-				40B4B4E320E90ED40044B6C7 /* opython.rc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4049E3072305AE5300A2D24E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -r \"$OMNIS_EXE/Contents/MacOS/xcomp/$WRAPPER_NAME/\"\ncp -r \"$INSTALL_PATH/$WRAPPER_NAME\" \"$OMNIS_EXE/Contents/MacOS/xcomp\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96CA4E570907E8CC00C234AA /* Sources */ = {
@@ -289,33 +298,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C167EFE841241C02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		40B4B4DE20E90ED40044B6C7 /* opython.bmp */ = {
-			isa = PBXVariantGroup;
-			children = (
-				40B4B4DF20E90ED40044B6C7 /* English */,
-			);
-			name = opython.bmp;
-			sourceTree = "<group>";
-		};
-		40B4B4E020E90ED40044B6C7 /* opython.rc */ = {
-			isa = PBXVariantGroup;
-			children = (
-				40B4B4E120E90ED40044B6C7 /* English */,
-			);
-			name = opython.rc;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		96CA4E5E0907E8CC00C234AA /* Development */ = {
 			isa = XCBuildConfiguration;
@@ -339,6 +321,7 @@
 				INSTALL_PATH = "$(PROJECT_DIR)/../_OSXUnicodeDbg";
 				LIBRARY_SEARCH_PATHS = "$(PYTHON_ROOT)";
 				LIBRARY_STYLE = DYNAMIC;
+				OMNIS_EXE = "/Volumes/Macintosh-HD/Applications/Omnis Studio 8.1 x64.app";
 				OMNIS_SDK_ROOT = "../../omnis/OSX-SDK-8.1-x64";
 				OTHER_CFLAGS = (
 					"-fshort-wchar",
@@ -381,6 +364,7 @@
 				INSTALL_PATH = "$(PROJECT_DIR)/../_OSXUnicode";
 				LIBRARY_SEARCH_PATHS = "$(PYTHON_ROOT)";
 				LIBRARY_STYLE = DYNAMIC;
+				OMNIS_EXE = "/Volumes/Macintosh-HD/Applications/Omnis Studio 8.1 x64.app";
 				OMNIS_SDK_ROOT = "../../omnis/OSX-SDK-8.1-x64";
 				OTHER_CFLAGS = (
 					"-fshort-wchar",
