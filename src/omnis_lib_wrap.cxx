@@ -142,7 +142,11 @@ template <typename T> T SwigValueInit() {
 
 
 /* Python.h has to appear first */
+#if __APPLE__
 #include <Python/Python.h>
+#else
+#include <Python.h>
+#endif
 
 /* -----------------------------------------------------------------------------
  * swigrun.swg

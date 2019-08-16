@@ -58,7 +58,11 @@ void syspath()
     }
 }
 
+#if __APPLE__
 #include <dlfcn.h>
+#else
+#endif
+
 
 void initialize() 
 {
