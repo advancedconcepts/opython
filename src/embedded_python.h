@@ -13,7 +13,7 @@ namespace embedded_python
     // set the python home
     void        set_python_home( const char *home ) ;
     // initializes python
-	void		initialize() ;
+	void		initialize(bool &hasSite) ;
     // finalize python 
 	void		finalize() ;
     // load module

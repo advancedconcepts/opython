@@ -64,7 +64,7 @@ void syspath()
 #endif
 
 
-void initialize() 
+void initialize(bool &hasSite) 
 {
 //	PyEval_InitThreads() ;
 #if __APPLE__
@@ -87,6 +87,23 @@ void initialize()
 #endif
     if (gHome[0] != 0)
         Py_SetPythonHome( gHome ) ;
+
+#ifndef __APPLE__
+    // we might not have a proper python site, so to avoid exit(1) from 
+    // Py_InitializeEx we start with a NoSite setup
+
+    Py_NoSiteFlag = 1;
+    Py_InitializeEx(0);
+    char* prefix = Py_GetPrefix();
+    
+    if ( prefix != NULL && prefix[0] != 0)
+    {
+        Py_Finalize();
+        Py_NoSiteFlag = 0;
+    }
+#endif
+    hasSite = (Py_NoSiteFlag == 0);
+
     Py_InitializeEx(0);
 
     PySys_SetArgv(sizeof(python_argv)/sizeof(char*)-1,python_argv);

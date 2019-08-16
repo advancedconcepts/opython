@@ -69,7 +69,13 @@ void ensurePythonIsInitialized()
 {
     if ( !gIsPythonInitialized )
     {
-        embedded_python::initialize() ;
+        bool hasSite = false;
+        embedded_python::initialize(hasSite) ;
+        if (!hasSite)
+        {
+            str255 tmpStr(QTEXT("oPython did not encounter a proper Python installation, only core functionality available"));
+            ECOaddTraceLine(&tmpStr);
+        }
 
 #ifndef use_sip
         init_omnis();
@@ -189,11 +195,14 @@ int mainlib::invokeMethod(qlong pMethodId, EXTCompInfo *pECI)
                 pmod = embedded_python::load_module((char*) modulename.c_str() ) ;
                 pdict = PyModule_GetDict(pmod) ;
                 
-                FILE *fp = fopen( filenames.c_str() , "r" );
+                // this solves crashes due to different CRT dependencies in python and xcomp
+                // let everything happen in the one from python
+                PyObject *pfp = PyFile_FromString((char*) filenames.c_str(), "r");
+                FILE* fp = PyFile_AsFile(pfp);
                 if ( fp )
                 {
-                    PyObject* retval = PyRun_FileEx( fp , (char*) filename.cString(), Py_file_input , pdict , pdict , 1 ) ;
-                    if ( retval )
+                    PyObject* retval = PyRun_FileEx( fp , filenames.c_str(), Py_file_input , pdict , pdict , 1 ) ;
+                    if ( retval ) 
                     {
                         char *cstr ;
                         if ( PyArg_Parse( retval , "s" , &cstr ) )
@@ -209,6 +218,14 @@ int mainlib::invokeMethod(qlong pMethodId, EXTCompInfo *pECI)
                         PyErr_Print() ;
                     }
                 }
+                else
+                {   
+                    qstring tmpString;
+                    tmpString.appendFormattedString("oPython could not open %s", filenames.c_str());
+                    str255 tmpStr(tmpString.cString());
+                    ECOaddTraceLine(&tmpStr);
+                }
+                Py_XDECREF(pfp);
                 Py_XDECREF( pmod ) ;
 
             }
