@@ -1,4 +1,4 @@
 LIBRARY         OPYTHON
 EXPORTS
-    GenericWndProc  @1
+    FrameworkWndProc  @1
  
