@@ -9,7 +9,7 @@ TBD
 
 - under macOS there is always a system-wide installation of Python available, under Windows you must install Python from https://www.python.org/downloads/windows/ : oPython needs a 2.7+ version, not a 3.X version
 - Copy the oPython XCOMP into the corresponding XCOMP folder of Omnis Studio.
-- The `src/omnis.py` file belongs to the site-packages folder in your python home. (On macOS for the built-in Python this is in `/Library/Python/2.7/site-packages`)
+- The `src/omnis.py` file belongs to the site-packages folder in your python home. (On macOS for the built-in Python this is in `/Library/Python/2.7/site-packages`, on Windows eg in the C:/Python27/Lib/site-packages folder)
 
 ## Reference
 
