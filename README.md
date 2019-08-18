@@ -5,6 +5,8 @@ Omnis Studio XCOMP for running python code from within Omnis Libraries
 
 TBD
 
+There are some prebuilt xcomps ready for use in the `prebuilt` directory
+
 ## Installation
 
 - under macOS there is always a system-wide installation of Python available, under Windows you must install Python from https://www.python.org/downloads/windows/ : oPython needs a 2.7+ version, not a 3.X version
