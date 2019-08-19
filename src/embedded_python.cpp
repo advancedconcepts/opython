@@ -1,20 +1,26 @@
 #include "embedded_python.h"
 
+#include <extcomp.he>
+#include <extfval.he>
+
+#include <hwnd.he>
+#include <gdi.he>
+
 namespace embedded_python 
 {
 #ifndef _MAX_PATH
 #define _MAX_PATH 1024
 #endif
-
-char gHome[_MAX_PATH] = "" ;
-char gDir[_MAX_PATH] = "" ;
-
-void set_python_home( const char *home ) 
+    
+pchar_t gHome[_MAX_PATH] = PSTR("") ;
+pchar_t gDir[_MAX_PATH] = PSTR("") ;
+    
+void set_python_home( const pchar_t *home )
 {
-    strcpy( gHome , home ) ;
+    pstrcpy( gHome , home ) ;
 }
 
-char *python_argv[] = { "opython", "-v" , NULL };
+const pchar_t *python_argv[] = { PSTR("opython"), PSTR("-v") , NULL };
 
 #ifdef use_sip
 
@@ -31,6 +37,8 @@ struct _inittab builtin_modules[] = {
 
 #endif
 
+#if 0
+    
 #define MAXPATHLEN 512
 
 void syspath()
@@ -57,6 +65,8 @@ void syspath()
         }
     }
 }
+    
+#endif
 
 #if __APPLE__
 #include <dlfcn.h>
@@ -72,10 +82,15 @@ void initialize(bool &hasSite)
     // xcomp is inside the bundle
     CFStringRef path = CFURLCopyFileSystemPath ( url , kCFURLPOSIXPathStyle ) ;
     CFRelease( url );
+#if PY_MAJOR_VERSION < 3
     CFStringGetCString( path , gDir , _MAX_PATH , kCFStringEncodingMacRoman );  
+#else
+    CFStringGetBytes( path, CFRangeMake(0,CFStringGetLength(path)), kCFStringEncodingUTF32LE, 0, false,
+                                        (uint8*) gDir, sizeof(gDir), NULL);
+#endif
     CFRelease( path );
-    strcat( gDir , "/Contents/MacOS/xcomp/opython" ) ;
-    Py_SetProgramName(gDir);
+    pstrcat( gDir , PSTR("/Contents/MacOS/xcomp/opython") ) ;
+    Py_SetProgramName((const wchar_t*) gDir);
     //if (gHome[0] == 0)
     //    strcpy(gHome, gDir );
 #endif
@@ -86,7 +101,7 @@ void initialize(bool &hasSite)
     Py_VerboseFlag = 1;
 #endif
     if (gHome[0] != 0)
-        Py_SetPythonHome( gHome ) ;
+        Py_SetPythonHome( (wchar_t*) gHome ) ;
 
 #ifndef __APPLE__
     // we might not have a proper python site, so to avoid exit(1) from 
@@ -106,7 +121,7 @@ void initialize(bool &hasSite)
 
     Py_InitializeEx(0);
 
-    PySys_SetArgv(sizeof(python_argv)/sizeof(char*)-1,python_argv);
+    PySys_SetArgv(sizeof(python_argv)/sizeof(char*)-1,(wchar_t **) python_argv);
 }
 
 void finalize() 

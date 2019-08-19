@@ -56,9 +56,9 @@ ECOmethodEvent gOPythonStaticFunctions[] =
 extern "C"
 {
 #ifdef ismach_o
-     void init_omnis() ;
+     void PINIT(omnis)() ;
 #else
-    __declspec(dllexport) void init_omnis() ;
+    __declspec(dllexport) void init_omnis()() ;
 #endif
 } ;
 
@@ -78,7 +78,7 @@ void ensurePythonIsInitialized()
         }
 
 #ifndef use_sip
-        init_omnis();
+        PINIT(omnis)();
 #endif
 
         gIsPythonInitialized = true;
@@ -197,8 +197,12 @@ int mainlib::invokeMethod(qlong pMethodId, EXTCompInfo *pECI)
                 
                 // this solves crashes due to different CRT dependencies in python and xcomp
                 // let everything happen in the one from python
+#if PY_MAJOR_VERSION < 3
                 PyObject *pfp = PyFile_FromString((char*) filenames.c_str(), "r");
                 FILE* fp = PyFile_AsFile(pfp);
+#else
+                FILE* fp = fopen( filenames.c_str(), "r" );
+#endif
                 if ( fp )
                 {
                     PyObject* retval = PyRun_FileEx( fp , filenames.c_str(), Py_file_input , pdict , pdict , 1 ) ;
@@ -225,8 +229,12 @@ int mainlib::invokeMethod(qlong pMethodId, EXTCompInfo *pECI)
                     str255 tmpStr(tmpString.cString());
                     ECOaddTraceLine(&tmpStr);
                 }
+#if PY_MAJOR_VERSION < 3
                 Py_XDECREF(pfp);
                 Py_XDECREF( pmod ) ;
+#else
+                
+#endif
 
             }
             break;
@@ -243,7 +251,11 @@ int mainlib::invokeMethod(qlong pMethodId, EXTCompInfo *pECI)
                 home.getChar(homedir);
 #endif
                 qstring homedirs(homedir.cString());
+#if PY_MAJOR_VERSION < 3
                 embedded_python::set_python_home(homedirs.c_str());
+#else
+                embedded_python::set_python_home((const pchar_t*)homedirs.cString());
+#endif
             }
             break;
         default:

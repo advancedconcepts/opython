@@ -10,10 +10,29 @@
 		40330DD920E914510082044D /* omnis_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DD620E914510082044D /* omnis_lib.cpp */; };
 		40330DDA20E914510082044D /* opython.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DD720E914510082044D /* opython.cpp */; };
 		40330DDB20E914510082044D /* omnis_lib_wrap.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 40330DD820E914510082044D /* omnis_lib_wrap.cxx */; };
-		40330DDE20E918A00082044D /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40330DDD20E918A00082044D /* Python.framework */; };
 		40330DE420E919630082044D /* embedded_python.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DE020E919620082044D /* embedded_python.cpp */; };
 		40330DE520E91C4D0082044D /* FrameworkWndProc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97272097DC99006A5A95 /* FrameworkWndProc.cpp */; };
 		40330DE820E924580082044D /* opythonobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DE720E924580082044D /* opythonobject.cpp */; };
+		40CBD56323095A5600D411BB /* oXCompLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD972C2097DC9A006A5A95 /* oXCompLib.cpp */; };
+		40CBD56423095A5600D411BB /* embedded_python.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DE020E919620082044D /* embedded_python.cpp */; };
+		40CBD56523095A5600D411BB /* oDrawingCanvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD972F2097DC9A006A5A95 /* oDrawingCanvas.cpp */; };
+		40CBD56623095A5600D411BB /* omnis_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DD620E914510082044D /* omnis_lib.cpp */; };
+		40CBD56723095A5600D411BB /* qString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97292097DC99006A5A95 /* qString.cpp */; };
+		40CBD56823095A5600D411BB /* omnis_lib_wrap.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 40330DD820E914510082044D /* omnis_lib_wrap.cxx */; };
+		40CBD56923095A5600D411BB /* oBaseVisComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD972B2097DC99006A5A95 /* oBaseVisComponent.cpp */; };
+		40CBD56A23095A5600D411BB /* oBaseComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97242097DC99006A5A95 /* oBaseComponent.cpp */; };
+		40CBD56B23095A5600D411BB /* opythonobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DE720E924580082044D /* opythonobject.cpp */; };
+		40CBD56C23095A5600D411BB /* opython.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40330DD720E914510082044D /* opython.cpp */; };
+		40CBD56D23095A5600D411BB /* FrameworkWndProc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97272097DC99006A5A95 /* FrameworkWndProc.cpp */; };
+		40CBD56E23095A5600D411BB /* oUTF8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97332097DC9A006A5A95 /* oUTF8.cpp */; };
+		40CBD56F23095A5600D411BB /* oRGBAImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97352097DC9A006A5A95 /* oRGBAImage.cpp */; };
+		40CBD57023095A5600D411BB /* oBaseNVComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97222097DC99006A5A95 /* oBaseNVComponent.cpp */; };
+		40CBD57323095A5600D411BB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA7FFBFE8413EDC02AAC07 /* Cocoa.framework */; };
+		40CBD57423095A5600D411BB /* u_complib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CA4E650907EB0700C234AA /* u_complib.framework */; };
+		40CBD58323095F8D00D411BB /* libpython2.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CBD58223095F8D00D411BB /* libpython2.7.dylib */; };
+		40CBD5852309609300D411BB /* libpython3.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CBD5842309609300D411BB /* libpython3.7.dylib */; };
+		40CBD58623098DE000D411BB /* opython.rc in Resources */ = {isa = PBXBuildFile; fileRef = 4049E3002305A95D00A2D24E /* opython.rc */; };
+		40CBD58823098DEB00D411BB /* opython3.rc in Resources */ = {isa = PBXBuildFile; fileRef = 40CBD58723098DEB00D411BB /* opython3.rc */; };
 		96CA4E5A0907E8CC00C234AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA7FFBFE8413EDC02AAC07 /* Cocoa.framework */; };
 		96CA4E660907EB0700C234AA /* u_complib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CA4E650907EB0700C234AA /* u_complib.framework */; };
 		ACFD97362097DC9B006A5A95 /* oBaseNVComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACFD97222097DC99006A5A95 /* oBaseNVComponent.cpp */; };
@@ -27,6 +46,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
+		40CBD57623095A5600D411BB /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.rc";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(TEMP_FILE_DIR)/omnisrc/Localizable.strings",
+			);
+			script = "$DEVELOPER_TOOLS_DIR/omnisrc64.app/Contents/MacOS/omnisrc64 INPUT_FILE_PATH TEMP_FILE_DIR REZ_SEARCH_PATHS XCOMP\nif [ -f $TEMP_FILE_DIR/omnisrc/Bitmap.strings ]; then\ncp $TEMP_FILE_DIR/omnisrc/Bitmap.strings $INSTALL_DIR/$CONTENTS_FOLDER_PATH/Resources\nfi\nshopt -s nullglob\nif [ ! -z \"`echo $TEMP_FILE_DIR/omnisrc/*.PNG`\" ]; then\ncp $TEMP_FILE_DIR/omnisrc/*.PNG $INSTALL_DIR/$CONTENTS_FOLDER_PATH/Resources\nfi";
+		};
 		96CA4E5C0907E8CC00C234AA /* PBXBuildRule */ = {
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.compilers.proxy.script;
@@ -45,7 +75,6 @@
 		40330DD620E914510082044D /* omnis_lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = omnis_lib.cpp; path = ../src/omnis_lib.cpp; sourceTree = "<group>"; };
 		40330DD720E914510082044D /* opython.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = opython.cpp; path = ../src/opython.cpp; sourceTree = "<group>"; };
 		40330DD820E914510082044D /* omnis_lib_wrap.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = omnis_lib_wrap.cxx; path = ../src/omnis_lib_wrap.cxx; sourceTree = "<group>"; };
-		40330DDD20E918A00082044D /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = System/Library/Frameworks/Python.framework; sourceTree = SDKROOT; };
 		40330DDF20E919620082044D /* opython.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opython.h; path = ../src/opython.h; sourceTree = "<group>"; };
 		40330DE020E919620082044D /* embedded_python.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = embedded_python.cpp; path = ../src/embedded_python.cpp; sourceTree = "<group>"; };
 		40330DE120E919620082044D /* embedded_python.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = embedded_python.h; path = ../src/embedded_python.h; sourceTree = "<group>"; };
@@ -55,6 +84,11 @@
 		4049E3002305A95D00A2D24E /* opython.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = opython.rc; sourceTree = "<group>"; };
 		4049E3012305A95E00A2D24E /* opython.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = opython.bmp; sourceTree = "<group>"; };
 		4049E3042305A96D00A2D24E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40CBD57A23095A5600D411BB /* opython3.u_xcomp */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = opython3.u_xcomp; sourceTree = BUILT_PRODUCTS_DIR; };
+		40CBD57B23095A5600D411BB /* P3Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = P3Info.plist; path = "/Volumes/Macintosh-HD/Sources/opython/build/P3Info.plist"; sourceTree = "<absolute>"; };
+		40CBD58223095F8D00D411BB /* libpython2.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpython2.7.dylib; path = "/Volumes/Macintosh-HD/Sources/opython/build/../../../../../System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config/libpython2.7.dylib"; sourceTree = "<absolute>"; };
+		40CBD5842309609300D411BB /* libpython3.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpython3.7.dylib; path = "../../../../../Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/libpython3.7.dylib"; sourceTree = "<group>"; };
+		40CBD58723098DEB00D411BB /* opython3.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = opython3.rc; sourceTree = "<group>"; };
 		96CA4E610907E8CC00C234AA /* opython.u_xcomp */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = opython.u_xcomp; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CA4E650907EB0700C234AA /* u_complib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = u_complib.framework; path = ../complib/u_complib.framework; sourceTree = SOURCE_ROOT; };
 		AC48CBBD209991980019A1E9 /* example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = example.h; path = Src/example.h; sourceTree = "<group>"; };
@@ -83,12 +117,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		40CBD57123095A5600D411BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40CBD57323095A5600D411BB /* Cocoa.framework in Frameworks */,
+				40CBD57423095A5600D411BB /* u_complib.framework in Frameworks */,
+				40CBD5852309609300D411BB /* libpython3.7.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		96CA4E590907E8CC00C234AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40330DDE20E918A00082044D /* Python.framework in Frameworks */,
 				96CA4E5A0907E8CC00C234AA /* Cocoa.framework in Frameworks */,
+				40CBD58323095F8D00D411BB /* libpython2.7.dylib in Frameworks */,
 				96CA4E660907EB0700C234AA /* u_complib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +157,8 @@
 		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				40CBD58223095F8D00D411BB /* libpython2.7.dylib */,
+				40CBD5842309609300D411BB /* libpython3.7.dylib */,
 				96CA4E650907EB0700C234AA /* u_complib.framework */,
 				08EA7FFBFE8413EDC02AAC07 /* Cocoa.framework */,
 			);
@@ -122,6 +168,8 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				40CBD58723098DEB00D411BB /* opython3.rc */,
+				40CBD57B23095A5600D411BB /* P3Info.plist */,
 				4049E3042305A96D00A2D24E /* Info.plist */,
 				4049E3012305A95E00A2D24E /* opython.bmp */,
 				4049E3002305A95D00A2D24E /* opython.rc */,
@@ -149,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				96CA4E610907E8CC00C234AA /* opython.u_xcomp */,
+				40CBD57A23095A5600D411BB /* opython3.u_xcomp */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,7 +205,6 @@
 		40330DDC20E918A00082044D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				40330DDD20E918A00082044D /* Python.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,9 +249,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		96CA4E530907E8CC00C234AA /* UnicodeCore */ = {
+		40CBD56023095A5600D411BB /* opython3 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96CA4E5D0907E8CC00C234AA /* Build configuration list for PBXNativeTarget "UnicodeCore" */;
+			buildConfigurationList = 40CBD57723095A5600D411BB /* Build configuration list for PBXNativeTarget "opython3" */;
+			buildPhases = (
+				40CBD56123095A5600D411BB /* Resources */,
+				40CBD56223095A5600D411BB /* Sources */,
+				40CBD57123095A5600D411BB /* Frameworks */,
+				40CBD57523095A5600D411BB /* ShellScript */,
+			);
+			buildRules = (
+				40CBD57623095A5600D411BB /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = opython3;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = xrandom;
+			productReference = 40CBD57A23095A5600D411BB /* opython3.u_xcomp */;
+			productType = "com.apple.product-type.bundle";
+		};
+		96CA4E530907E8CC00C234AA /* opython */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CA4E5D0907E8CC00C234AA /* Build configuration list for PBXNativeTarget "opython" */;
 			buildPhases = (
 				96CA4E540907E8CC00C234AA /* Resources */,
 				96CA4E570907E8CC00C234AA /* Sources */,
@@ -215,7 +283,7 @@
 			);
 			dependencies = (
 			);
-			name = UnicodeCore;
+			name = opython;
 			productInstallPath = "$(HOME)/Library/Bundles";
 			productName = xrandom;
 			productReference = 96CA4E610907E8CC00C234AA /* opython.u_xcomp */;
@@ -243,16 +311,26 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				96CA4E530907E8CC00C234AA /* UnicodeCore */,
+				96CA4E530907E8CC00C234AA /* opython */,
+				40CBD56023095A5600D411BB /* opython3 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		40CBD56123095A5600D411BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40CBD58823098DEB00D411BB /* opython3.rc in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		96CA4E540907E8CC00C234AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40CBD58623098DE000D411BB /* opython.rc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +350,43 @@
 			shellPath = /bin/sh;
 			shellScript = "rm -r \"$OMNIS_EXE/Contents/MacOS/xcomp/$WRAPPER_NAME/\"\ncp -r \"$INSTALL_PATH/$WRAPPER_NAME\" \"$OMNIS_EXE/Contents/MacOS/xcomp\"";
 		};
+		40CBD57523095A5600D411BB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -r \"$OMNIS_EXE/Contents/MacOS/xcomp/$WRAPPER_NAME/\"\ncp -r \"$INSTALL_PATH/$WRAPPER_NAME\" \"$OMNIS_EXE/Contents/MacOS/xcomp\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		40CBD56223095A5600D411BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40CBD56323095A5600D411BB /* oXCompLib.cpp in Sources */,
+				40CBD56423095A5600D411BB /* embedded_python.cpp in Sources */,
+				40CBD56523095A5600D411BB /* oDrawingCanvas.cpp in Sources */,
+				40CBD56623095A5600D411BB /* omnis_lib.cpp in Sources */,
+				40CBD56723095A5600D411BB /* qString.cpp in Sources */,
+				40CBD56823095A5600D411BB /* omnis_lib_wrap.cxx in Sources */,
+				40CBD56923095A5600D411BB /* oBaseVisComponent.cpp in Sources */,
+				40CBD56A23095A5600D411BB /* oBaseComponent.cpp in Sources */,
+				40CBD56B23095A5600D411BB /* opythonobject.cpp in Sources */,
+				40CBD56C23095A5600D411BB /* opython.cpp in Sources */,
+				40CBD56D23095A5600D411BB /* FrameworkWndProc.cpp in Sources */,
+				40CBD56E23095A5600D411BB /* oUTF8.cpp in Sources */,
+				40CBD56F23095A5600D411BB /* oRGBAImage.cpp in Sources */,
+				40CBD57023095A5600D411BB /* oBaseNVComponent.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		96CA4E570907E8CC00C234AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,6 +411,122 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		40CBD57823095A5600D411BB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				BUILD_VARIANTS = normal;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(OMNIS_SDK_ROOT)/complib",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers/carbnuni.h";
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers",
+					/Library/Frameworks/Python.framework/Versions/3.7/include/python3.7m,
+				);
+				INFOPLIST_FILE = P3Info.plist;
+				INIT_ROUTINE = "";
+				INSTALL_PATH = "$(PROJECT_DIR)/../_OSXUnicodeDbg";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PYTHON_ROOT)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin",
+				);
+				LIBRARY_STYLE = DYNAMIC;
+				OMNIS_EXE = "/Volumes/Macintosh-HD/Applications/Omnis Studio 8.1 x64.app";
+				OMNIS_SDK_ROOT = "../../omnis/OSX-SDK-8.1-x64";
+				OTHER_CFLAGS = (
+					"-fshort-wchar",
+					"-Dismach_o",
+					"-Wno-comment",
+					"-DOMNISSDK=81",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.advancedconcepts.opython3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PYTHON_ROOT_ = "../../Python-2.6";
+				RESMERGER_SOURCES_FORK = data;
+				REZ_SEARCH_PATHS = (
+					$PROJECT_DIR,
+					$PROJECT_DIR/English.lproj,
+				);
+				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PYTHON_ROOT)/include $(PYTHON_ROOT)";
+				WRAPPER_EXTENSION = u_xcomp;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		40CBD57923095A5600D411BB /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(OMNIS_SDK_ROOT)/complib",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers/carbnuni.h";
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers",
+					/Library/Frameworks/Python.framework/Versions/3.7/include/python3.7m,
+				);
+				INFOPLIST_FILE = P3Info.plist;
+				INSTALL_PATH = "$(PROJECT_DIR)/../_OSXUnicode";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PYTHON_ROOT)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin",
+				);
+				LIBRARY_STYLE = DYNAMIC;
+				OMNIS_EXE = "/Volumes/Macintosh-HD/Applications/Omnis Studio 8.1 x64.app";
+				OMNIS_SDK_ROOT = "../../omnis/OSX-SDK-8.1-x64";
+				OTHER_CFLAGS = (
+					"-fshort-wchar",
+					"-Dismach_o",
+					"-Wno-comment",
+					"-DOMNISSDK=81",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.advancedconcepts.opython3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
+				PYTHON_ROOT_ = "../../Python-2.6";
+				RESMERGER_SOURCES_FORK = data;
+				REZ_SEARCH_PATHS = (
+					$PROJECT_DIR,
+					$PROJECT_DIR/English.lproj,
+				);
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PYTHON_ROOT)/include $(PYTHON_ROOT)";
+				VERSION_INFO_FILE = "$(PRODUCT_NAME)_vers.c";
+				WRAPPER_EXTENSION = u_xcomp;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
 		96CA4E5E0907E8CC00C234AA /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -315,11 +543,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers/carbnuni.h";
 				GENERATE_PKGINFO_FILE = YES;
-				HEADER_SEARCH_PATHS = "$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers";
+				HEADER_SEARCH_PATHS = (
+					"$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers",
+					/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INIT_ROUTINE = "";
 				INSTALL_PATH = "$(PROJECT_DIR)/../_OSXUnicodeDbg";
-				LIBRARY_SEARCH_PATHS = "$(PYTHON_ROOT)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PYTHON_ROOT)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config",
+				);
 				LIBRARY_STYLE = DYNAMIC;
 				OMNIS_EXE = "/Volumes/Macintosh-HD/Applications/Omnis Studio 8.1 x64.app";
 				OMNIS_SDK_ROOT = "../../omnis/OSX-SDK-8.1-x64";
@@ -359,10 +593,16 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers/carbnuni.h";
 				GENERATE_PKGINFO_FILE = YES;
-				HEADER_SEARCH_PATHS = "$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers";
+				HEADER_SEARCH_PATHS = (
+					"$(OMNIS_SDK_ROOT)/complib/u_complib.framework/Headers",
+					/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(PROJECT_DIR)/../_OSXUnicode";
-				LIBRARY_SEARCH_PATHS = "$(PYTHON_ROOT)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PYTHON_ROOT)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config",
+				);
 				LIBRARY_STYLE = DYNAMIC;
 				OMNIS_EXE = "/Volumes/Macintosh-HD/Applications/Omnis Studio 8.1 x64.app";
 				OMNIS_SDK_ROOT = "../../omnis/OSX-SDK-8.1-x64";
@@ -425,7 +665,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		96CA4E5D0907E8CC00C234AA /* Build configuration list for PBXNativeTarget "UnicodeCore" */ = {
+		40CBD57723095A5600D411BB /* Build configuration list for PBXNativeTarget "opython3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40CBD57823095A5600D411BB /* Development */,
+				40CBD57923095A5600D411BB /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		96CA4E5D0907E8CC00C234AA /* Build configuration list for PBXNativeTarget "opython" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96CA4E5E0907E8CC00C234AA /* Development */,

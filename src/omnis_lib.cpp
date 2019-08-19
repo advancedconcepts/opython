@@ -47,10 +47,18 @@ short GetFldRef(qcbchar far *name, qproc callback);
 */
 }
 
+#if PY_MAJOR_VERSION < 3
+#define CHRconvFromPython CHRconvFromLatin1ApiBytes
+#define CHRconvToPython CHRconvToLatin1ApiBytes
+#else
+#define CHRconvFromPython CHRconvFromUtf8
+#define CHRconvToPython CHRconvToUtf8
+#endif
+
 bool messageBox(int type , bool bell , const std::string& message ) 
 {
 #ifdef isunicode
-    CHRconvFromLatin1ApiBytes conv( (qbyte*)message.c_str() );
+    CHRconvFromPython conv( (qbyte*)message.c_str() );
     str255 msg(conv.dataPtr());
 #else
     str255 msg(message.c_str()) ;
@@ -61,7 +69,7 @@ bool messageBox(int type , bool bell , const std::string& message )
 void addTraceLine(const std::string& message ) 
 {
 #ifdef isunicode
-    CHRconvFromLatin1ApiBytes conv( (qbyte*)message.c_str() );
+    CHRconvFromPython conv( (qbyte*)message.c_str() );
     str255 msg(conv.dataPtr());
 #else
    str255 msg(message.c_str()) ;
@@ -154,7 +162,7 @@ Value& Value::operator=( const Value& rhs )
 void Value::setString( const std::string &val ) 
 {
 #ifdef isunicode
-    CHRconvFromLatin1ApiBytes conv( (qbyte*)val.c_str() );
+    CHRconvFromPython conv( (qbyte*)val.c_str() );
     m_value->setChar( conv.dataPtr() , conv.len() ) ;
 #else
     m_value->setChar( (qchar*) val.c_str() , val.length() ) ;
@@ -173,7 +181,7 @@ std::string Value::getString() const
 	p[reallen] = 0 ;
 
 #ifdef isunicode
-    std::string retval((char*)CHRconvToLatin1ApiBytes(p).dataPtr()) ;
+    std::string retval((char*)CHRconvToPython(p).dataPtr()) ;
 #else
     std::string retval((const char*) p) ;
 #endif
@@ -299,7 +307,7 @@ short Value::doMethod( const std::string &methodname , Value& p1 , Value& p2 , V
     qshort dp ;
     m_value->getType( fieldType , &dp ) ;
 #ifdef isunicode
-    CHRconvFromLatin1ApiBytes conv( (qbyte*)methodname.c_str() );
+    CHRconvFromPython conv( (qbyte*)methodname.c_str() );
     str255 name(conv.dataPtr());
 #else
     str255 name(methodname.c_str()) ;
@@ -340,7 +348,7 @@ void Value::ValueHasChanged()
 Variable::Variable( const std::string& varname , bool willAlter ) 
 {
 #ifdef isunicode
-    CHRconvFromLatin1ApiBytes conv( (qbyte*)varname.c_str() );
+    CHRconvFromPython conv( (qbyte*)varname.c_str() );
     str255 var(conv.dataPtr());
 #else
     str255 var(varname.c_str()) ;
@@ -371,7 +379,7 @@ Calculation::Calculation()
 Calculation::Calculation(const std::string& calculation) 
 {
 #ifdef isunicode
-    CHRconvFromLatin1ApiBytes conv( (qbyte*)calculation.c_str() );
+    CHRconvFromPython conv( (qbyte*)calculation.c_str() );
     str255 msg(conv.dataPtr());
 #else
     str255 msg(calculation.c_str()) ;

@@ -1,0 +1,20 @@
+#ifdef isMacRCC
+  #define isXCOMPLIB 1
+#endif
+
+1                       BITMAP                  "opython.bmp"
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    1000                    "oPy3Lib"
+    2000                    "Py3Object:Python Object Reference"
+    7000                    "script:the python commands to be executed"
+    7001                    "filename:the python filename to be executed"
+    7002                    "modulename:the python module in which it will be executed"
+    7003                    "homedirectory:the folder name for the home directory"
+    10000                   "$runstring:$runstring(script,modulename) will execute the passed in string as a python script"
+    10001                   "$runfile:$runfile(filename,modulename) will execute the passed in filename as a python script"
+    10002                   "$setpythonhome:$setpythonhome(homedirectory) sets the home directory python will use"
+    10003                   "$runtext:$runtext(script,modulename) will execute the passed in string as a python script"
+    31000                   "FrameworkWndProc"
+END
