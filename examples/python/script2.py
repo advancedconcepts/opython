@@ -7,7 +7,7 @@
 
 import omnis
 import sys
-print sys.path
+print (sys.path)
 import os
 
 # direct calls back to omnis
@@ -47,7 +47,7 @@ for i in range(1,val.getRowCount()+1):
     item2 = omnis.Variable()
     val.getElement(i,1,item1)
     val.getElement(i,2,item2)
-    print item1.getString() + " " + item2.getString() + "\n"
+    print(item1.getString() + " " + item2.getString() + "\n")
 
 # accessing file variables
 
