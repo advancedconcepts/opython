@@ -73,6 +73,23 @@ void syspath()
 #else
 #endif
 
+#if PY_MAJOR_VERSION >= 3
+#  define SWIG_init    PyInit__omnis
+
+#else
+#  define SWIG_init    init_omnis
+
+#endif
+#define SWIG_name    "_omnis"
+
+extern "C" {
+#if PY_MAJOR_VERSION >= 3
+PyObject*
+#else
+void
+#endif
+SWIG_init(void);
+}
 
 void initialize(bool &hasSite) 
 {
@@ -96,6 +113,8 @@ void initialize(bool &hasSite)
 #endif
 #ifdef use_sip
 	PyImport_ExtendInittab(builtin_modules);
+#else
+    PyImport_AppendInittab(SWIG_name, &SWIG_init);
 #endif
 #ifdef DEBUG
     Py_VerboseFlag = 1;
