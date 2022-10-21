@@ -5,15 +5,17 @@ Omnis Studio XCOMP for running python code from within Omnis Libraries. It exist
 
 TBD
 
-There are some prebuilt xcomps ready for use in the `prebuilt` directory
+There are some prebuilt xcomps ready for use in the `prebuilt` directory. The prebuilt oPython3 Version for macOS is for a Python 3.10.X
 
 ## Installation
 
-- under macOS there is always a system-wide installation of Python available, under Windows you must install Python from https://www.python.org/downloads/windows/ : 
-	- oPython needs a 2.7+ version
+- under macOS there used to be a system-wide installation of Python available, but it was removed in macOS 12.3. Under macOS you should also have a universal version for AppleSilicon and Intel. So under both macOS and Windows you should install Python from [https://www.python.org/downloads/windows]() or [https://www.python.org/downloads/macos]() : 
+	- oPython needs a 2.7+ version 
 	- oPython3 a 3.X version
 - Copy the oPython or oPython3 XCOMP into the corresponding XCOMP folder of Omnis Studio.
-- The `src/omnis.py` file belongs to the site-packages folder in your python home. (For Python 2.7 eg on macOS for the built-in Python this is in `/Library/Python/2.7/site-packages`, on Windows eg in the C:/Python27/Lib/site-packages folder)
+- The `src/omnis.py` file belongs to the site-packages folder in your python home: 
+
+(For Python 2.7 on macOS for the built-in Python this is in `/Library/Python/2.7/site-packages`, on Windows eg in the C:/Python27/Lib/site-packages folder. For Python 3.10 on macOS the user site-packages is at `~/Library/Python/3.10/lib/python/site-packages` the system wide is at `/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages`)
 
 ## Reference
 
